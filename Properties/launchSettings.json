@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "vermilion_eve_assets": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7260",
+      "launchBrowser": false
+    }
+  }
+}

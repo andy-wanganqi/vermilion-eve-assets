@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "FUNCTIONS_EXTENSION_VERSION": "~4",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "1e3427f8-df80-4c75-9532-e7bef7798598",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "",
+    "WEBSITE_CONTENTSHARE": "vermilionevestaging9026",
+    "WEBSITE_RUN_FROM_PACKAGE": "",
+    "VEAssetsStorage": ""
+  }
+}
