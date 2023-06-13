@@ -12,8 +12,8 @@ namespace Vermilion.EVE.Functions
   {
     [FunctionName("CreateItemList")]
     public async Task RunAsync(
-        [TimerTrigger("* * 2 * * *")] TimerInfo myTimer,
-        [Blob("static-assets/items.json", FileAccess.Write), StorageAccount("VEAssetsStorage")] Stream output,
+        [TimerTrigger("0 0 * * * *")] TimerInfo myTimer,
+        [Blob("static-assets/items.json", FileAccess.Write), StorageAccount("VEAssetsStorage")] TextWriter output,
         ILogger log)
     {
       log.LogInformation($"CreateItemList started at: {DateTime.Now}");
@@ -21,9 +21,8 @@ namespace Vermilion.EVE.Functions
       var creator = new ItemListCreator();
       var items = await creator.RunAsync();
       string json = JsonConvert.SerializeObject(items);
-      var writer = new StreamWriter(output);
-      await writer.WriteAsync(json);
-      await writer.FlushAsync();
+      await output.WriteAsync(json);
+      await output.FlushAsync();
 
       log.LogInformation($"CreateItemList finished at: {DateTime.Now}");
     }
